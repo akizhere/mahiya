@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --red:#c9184a;
+  --cream:#fff0f3;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:'Inter', sans-serif;
+  background:linear-gradient(180deg,var(--cream),#fff);
+  text-align:center;
+  overflow-x:hidden;
+}
+
+.section{
+  min-height:100vh;
+  padding:60px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+h1,h2{
+  font-family:'Playfair Display', serif;
+  color:var(--red);
+}
+
+p{
+  max-width:600px;
+  line-height:1.6;
+}
+
+/* Buttons */
+.buttons{
+  margin-top:30px;
+}
+
+button{
+  padding:14px 30px;
+  border-radius:30px;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+}
+
+#yesBtn{
+  background:var(--red);
+  color:white;
+}
+
+#noBtn{
+  background:#ddd;
+  color:#444;
+  margin-left:15px;
+  position:relative;
+  transition:transform 0.45s cubic-bezier(0.22,1,0.36,1);
+}
+
+/* Hearts */
+.heart-bg{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+}
+
+.heart{
+  position:absolute;
+  bottom:-20px;
+  font-size:18px;
+  opacity:0.6;
+  animation:float 10s linear infinite;
+}
+
+@keyframes float{
+  to{
+    transform:translateY(-110vh);
+    opacity:0;
+  }
+}
+
+/* Explosion */
+.explosion{
+  position:absolute;
+  font-size:20px;
+  animation:explode 1s ease-out forwards;
+}
+
+@keyframes explode{
+  to{
+    transform:translate(var(--x),var(--y)) scale(0);
+    opacity:0;
+  }
+}
+
+/* Polaroids */
+.polaroid{
+  width:200px;
+  background:white;
+  padding:10px 10px 28px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.18);
+  margin:40px auto;
+  transform:rotate(var(--r));
+  position:relative;
+  overflow:hidden;
+}
+
+.polaroid img,
+.polaroid video{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  display:block;
+}
+
+.polaroid span{
+  display:block;
+  margin-top:10px;
+  font-size:14px;
+  font-family:'Playfair Display', serif;
+  color:#555;
+}
+
+.polaroid::after{
+  content:"❤️";
+  position:absolute;
+  top:-12px;
+  right:-12px;
+}
+
+/* Love page */
+#lovePage{
+  display:none;
+  background:linear-gradient(180deg,#fff0f3,#ffffff);
+}
+
+.love-collage{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  max-width:360px;
+  margin-top:30px;
+}
+
+.love-collage img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="heart-bg" id="heartBg"></div>
+
+<!-- MAIN STORY PAGE (FORMER PAGE 2) -->
+<section class="section" id="content">
+
+<h1> Happy 6 months GOPU! ❤️</h1>
+
+<div class="polaroid video-polaroid" style="--r:3deg;">
+  <video muted playsinline controls>
+    <source src="https://res.cloudinary.com/dkmwos6xn/video/upload/v1769873685/1763020277674697-2_pmmwdv.mp4" type="video/mp4">
+  </video>
+  <span> One video of ours that ill always love </span>
+</div>
+<a href=https://www.youtube.com/watch?v=JoFkQ7iAQcw&list=RDJoFkQ7iAQcw&start_radio=1>scroll while listening to this song.</a>
+<p>
+Even though technically we have been together for years now it has been 6 months of us officially dating but it feels like it was just yesterday that we kissed for the first time.
+</p>
+
+<div class="polaroid" style="--r:-4deg;">
+  <img src="https://res.cloudinary.com/dkmwos6xn/image/upload/v1769888123/IMG_1302_w4qbk7.jpg">
+  <span>barbank in january 2026 💞</span>
+</div>
+
+<h2>Why i made this?</h2>
+
+<p>
+I made this because i want to leave a digital footprint behind and make an effort towards making something that we can come back to sometime in the future, which has all our favourite moments captured put in a place,PLUS this is more of my way of expressing myself.
+</p>
+
+<div class="polaroid" style="--r:3deg;">
+  <img src="https://res.cloudinary.com/dkmwos6xn/image/upload/v1769888125/IMG_2415_et9qfw.heic">
+  <span>One of my favourite pictures again at barbank</span>
+</div>
+
+<p>
+I am not a person with alot of words and i dont know how to say things properly or feel them but i really love you and i love to see you happy i love seeing your smile,and i love it when you make all those goofy faces (my favourite).
+I have my unique ways of saying things and this is just a small gesture or a way of me expressing my love for you in my own way that felt alot more personalised and unique to me.
+</p>
+
+<div class="polaroid" style="--r:-2deg;">
+  <img src="https://res.cloudinary.com/dkmwos6xn/image/upload/v1769888127/05cff863-cec7-45d6-810a-b5544fc12286_bjgtm7.jpg">
+  <span>our first picture together as a couple at barbank ;)</span>
+</div>
+
+<h2>Love love love love!</h2>
+
+<p>
+ here are the three things that are so precious about you:
+1) The sound of your laugh and the way that you laugh its such a reward every time.
+2) The face that you make when i literally ragebait ts out of you.
+3)The fact that you have actually been such a good friend first and a good partner later.
+(H.M.) saying love you everytime even after being so mad at me
+</p>
+
+<div class="polaroid" style="--r:5deg;">
+  <img src=https://res.cloudinary.com/dkmwos6xn/image/upload/v1769884714/DSCN0279_xg3sbq.jpg>
+  <span>Had to include a solo picture of my beautiful bobu😉✨</span>
+</div>
+
+<p>
+6 months and so many memories we have made over the years of us knowing eachother and im so grateful to have someone like you in my life.
+</p>
+
+<div class="polaroid" style="--r:-5deg;">
+  <img src="https://res.cloudinary.com/dkmwos6xn/image/upload/v1769888119/42dcecb7-26dd-4736-9a65-bc3d499a5416_grsinp.jpg">
+  <span>One of the craziest and most important moment of ours</span>
+</div>
+
+<h2>SO!!!🌹</h2>
+
+<p>
+i wanted to take this special occasion to ask you this question for the very first time.
+</p>
+
+<p>
+Finally the most important question,will you go out with me this valentine? well if you are reading this your answer is probably already yes.
+</p>
+
+<div class="polaroid" style="--r:2deg;">
+  <img src="https://res.cloudinary.com/dkmwos6xn/image/upload/v1769888118/78b943f7-a0fe-4f40-bd3c-a720b1e9d9f4_wxdoio.jpg">
+  <span>Six months and counting ❤️</span>
+</div>
+
+<!-- VALENTINE QUESTION AT THE END -->
+<div class="buttons">
+  <h1> WILL YOU BE MY VALENTINE? </H1>
+  <button id="yesBtn">YES 💕</button>
+  <button id="noBtn">NO 👎</button>
+</div>
+
+</section>
+
+<!-- FINAL LOVE PAGE -->
+<section class="section" id="lovePage">
+  <h1>YAYYYY!! I love you ❤️</h1>
+
+  <div class="love-collage">
+    <img src="https://res.cloudinary.com/dkmwos6xn/image/upload/v1769888127/05cff863-cec7-45d6-810a-b5544fc12286_bjgtm7.jpg">
+    <img src="https://res.cloudinary.com/dkmwos6xn/image/upload/v1769888125/IMG_2415_et9qfw.heic">
+    <img src="https://res.cloudinary.com/dkmwos6xn/image/upload/v1769888123/IMG_1302_w4qbk7.jpg">
+    <img src=https://res.cloudinary.com/dkmwos6xn/image/upload/v1769884714/DSCN0279_xg3sbq.jpg>
+    <img src="https://res.cloudinary.com/dkmwos6xn/image/upload/v1769888119/42dcecb7-26dd-4736-9a65-bc3d499a5416_grsinp.jpg">
+    <img src="https://res.cloudinary.com/dkmwos6xn/image/upload/v1769888118/78b943f7-a0fe-4f40-bd3c-a720b1e9d9f4_wxdoio.jpg">
+  </div>
+</section>
+
+<script>
+/* Floating hearts */
+const heartBg=document.getElementById('heartBg');
+setInterval(()=>{
+  const h=document.createElement('div');
+  h.className='heart';
+  h.textContent='❤️';
+  h.style.left=Math.random()*100+'vw';
+  h.style.animationDuration=6+Math.random()*6+'s';
+  heartBg.appendChild(h);
+  setTimeout(()=>h.remove(),12000);
+},500);
+
+/* NO button logic */
+const noBtn=document.getElementById('noBtn');
+let noCount=0;
+let locked=false;
+
+function moveNo(){
+  if(locked) return;
+  noCount++;
+
+  const rect=noBtn.getBoundingClientRect();
+  const maxX=window.innerWidth-rect.width-20;
+  const maxY=window.innerHeight-rect.height-20;
+
+  const x=Math.random()*maxX;
+  const y=Math.random()*maxY;
+
+  setTimeout(()=>{
+    noBtn.style.transform=`translate(${x-rect.left}px,${y-rect.top}px)`;
+  },80);
+
+  if(noCount>=3){
+    locked=true;
+    setTimeout(()=>{
+      noBtn.textContent='YES 💕';
+      noBtn.style.background='var(--red)';
+      noBtn.style.color='white';
+      noBtn.style.transform='translate(0,0)';
+      noBtn.onclick=triggerYes;
+    },300);
+  }
+}
+
+noBtn.addEventListener('mouseenter',moveNo);
+noBtn.addEventListener('click',moveNo);
+
+document.getElementById('yesBtn').onclick=triggerYes;
+
+function triggerYes(){
+  for(let i=0;i<20;i++){
+    const h=document.createElement('div');
+    h.className='explosion';
+    h.textContent='❤️';
+    h.style.setProperty('--x',`${Math.random()*200-100}px`);
+    h.style.setProperty('--y',`${Math.random()*200-100}px`);
+    h.style.left='50%';
+    h.style.top='50%';
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),1000);
+  }
+
+  setTimeout(()=>{
+    document.getElementById('content').style.display='none';
+    document.getElementById('lovePage').style.display='flex';
+    document.getElementById('lovePage').scrollIntoView({behavior:'smooth'});
+  },800);
+}
+
+
+
+</script>
+
+<audio id="yesSound" preload="auto">
+  <source src="https://res.cloudinary.com/dkmwos6xn/video/upload/v1769885343/Children_Yay_Sound_Effect_HD_xeu2el.mp3" type="audio/mp3">
+</audio>
+</body>
+</html>
